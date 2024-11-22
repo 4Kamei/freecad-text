@@ -65,14 +65,10 @@ fn main() {
             .map(|v| v.transform(&Transform::translation(x as f32, y as f32)))
             .collect();
 
-        println!("Parsing character for key {key:?}");
-
         let mut last_point: Option<Point> = None;
         let mut first_point: Option<Point> = None;
 
         let mut primitives = vec![];
-
-        println!("Commands are {commands:?}");
 
         if commands.len() == 0 {
             continue;
